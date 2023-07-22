@@ -1,4 +1,4 @@
-function increment(x) {
+function increment(x: number) { // 型注釈を加えることでコンパイラに型を教えてあげる
     return x + 1;
 }
 
