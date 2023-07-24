@@ -1,4 +1,4 @@
-import { isNaturalNumber } from './main.ts';
+import { isNaturalNumber, reversePolishNotation } from './main.ts';
 import { assertEquals } from "https://deno.land/std@0.195.0/testing/asserts.ts";
 
 Deno.test("isNaturalNumber", () => {
@@ -13,9 +13,15 @@ Deno.test("isNaturalNumber", () => {
 
   const result4 = isNaturalNumber(1.1);
   assertEquals(result4, false);
-
-
-  // const result5 = isNaturalNumber("hoge");
-  // assertEquals(result5, false);
 });
 
+Deno.test("Addition", () => {
+  const result = reversePolishNotation(["1", "1", "+"]);
+  assertEquals(result, 2);
+
+  const result2 = reversePolishNotation(["1", "+", "2"]);
+  assertEquals(result2, undefined);
+
+  const result3 = reversePolishNotation(["+", "1", "1"]);
+  assertEquals(result3, undefined);
+});
