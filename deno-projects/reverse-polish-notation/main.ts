@@ -29,6 +29,16 @@ function reversePolishNotation(input: string[]): number | undefined {
           }
           break;
         }
+        case "*": {
+          const number1: number | undefined = stack.pop();
+          const number2: number | undefined = stack.pop();
+          if (typeof number1 === "number" && typeof number2 === "number") {
+            stack.push(number1 * number2);
+          } else {
+            throw new Error("Invalid input");
+          }
+          break;
+        }
         default: {
           const number: number = parseInt(element);
 
