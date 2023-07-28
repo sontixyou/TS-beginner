@@ -47,3 +47,17 @@ Deno.test("Multiplication", () => {
   const result3 : number | undefined = reversePolishNotation(["*", "1", "1"]);
   assertEquals(result3, undefined);
 });
+
+Deno.test("Division", () => {
+  const result : number | undefined = reversePolishNotation(["1", "5", "/"]);
+  assertEquals(result, 0.2);
+
+  const result2 : number | undefined = reversePolishNotation(["10", "2", "/"]);
+  assertEquals(result2, 5);
+
+  const result3 : number | undefined = reversePolishNotation(["1", "/", "2"]);
+  assertEquals(result3, undefined);
+
+  const result4 : number | undefined = reversePolishNotation(["/", "1", "1"]);
+  assertEquals(result4, undefined);
+});
