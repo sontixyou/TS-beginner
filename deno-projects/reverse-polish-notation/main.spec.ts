@@ -38,13 +38,13 @@ Deno.test("Subtraction", () => {
 });
 
 Deno.test("Multiplication", () => {
-  const result : number | undefined = reversePolishNotation(["1", "5", "*"]);
+  const result : number | undefined = reversePolishNotation(["1", "5", "x"]);
   assertEquals(result, 5);
 
-  const result2 : number | undefined = reversePolishNotation(["1", "*", "2"]);
+  const result2 : number | undefined = reversePolishNotation(["1", "x", "2"]);
   assertEquals(result2, undefined);
 
-  const result3 : number | undefined = reversePolishNotation(["*", "1", "1"]);
+  const result3 : number | undefined = reversePolishNotation(["x", "1", "1"]);
   assertEquals(result3, undefined);
 });
 
