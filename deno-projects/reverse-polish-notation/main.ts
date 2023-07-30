@@ -23,7 +23,7 @@ function reversePolishNotation(input: string[]): number | undefined {
           const number1: number | undefined = stack.pop();
           const number2: number | undefined = stack.pop();
           if (typeof number1 === "number" && typeof number2 === "number") {
-            stack.push(number1 - number2);
+            stack.push(number2 - number1);
           } else {
             throw new Error("Invalid input");
           }
