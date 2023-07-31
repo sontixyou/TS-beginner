@@ -64,3 +64,8 @@ Deno.test("Division", () => {
   const result4 : number | undefined = reversePolishNotation(["/", "1", "1"]);
   assertEquals(result4, undefined);
 });
+
+Deno.test("Complex expressions", () => {
+  const result : number | undefined = reversePolishNotation(["1", "2", "+", "4", "x", "5", "+"]);
+  assertEquals(result, 17);
+});

@@ -1,5 +1,6 @@
-逆ポーランド記法を使って計算する
-テストも書く。どんなライブラリでテストを書けるのかわからないので、調べるんや
+## Get Start
 
-足し算、引き算、掛け算、割り算に対応する。
-とりま自然数を対応する。
+1. Install Deno. ref: https://deno.land/manual@v1.35.3/getting_started/installation#installation
+2. git clone this repository
+3. move this directory and run `deno run main.ts 3 2 +`
+4. you can see the result `5`
