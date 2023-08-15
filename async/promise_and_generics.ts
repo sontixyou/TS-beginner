@@ -34,7 +34,7 @@ getMyUser().then((user: User) => {
 
 
 const promise: Promise<boolean> = Promise.resolve("1")
-  .then((value) => Number(value))
-  .then((value) => value > 0);
+  .then((value : string) : number=> Number(value))
+  .then((value : number) : boolean => value > 0);
 
 promise;
