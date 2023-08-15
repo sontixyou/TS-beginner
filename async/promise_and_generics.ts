@@ -31,3 +31,10 @@ const getMyUser = () : Promise<User> =>  {
 getMyUser().then((user: User) => {
   console.log(user);
 });
+
+
+const promise: Promise<boolean> = Promise.resolve("1")
+  .then((value) => Number(value))
+  .then((value) => value > 0);
+
+promise;
